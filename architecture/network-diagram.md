@@ -29,13 +29,21 @@ No unauthorized scanning of the real network is performed.
 
 ```mermaid
 flowchart LR
-    Host["Host Machine\nVMware Workstation"]
-    NAT["VMware NAT Network\nVMnet8"]
-    Kali["Kali Linux VM\nXFCE + Ollama"]
-    AI["Local AI Engine\nOllama - Mistral"]
-    Lab["Lab Targets\nDVWA | OWASP BWA | Metasploitable"]
+    Host["Host\nVMware"]
+    NAT["NAT\nVMnet8"]
+    Kali["Kali VM\nXFCE"]
+    AI["AI\nMistral"]
+    Lab["Lab VMs"]
 
     Host --> NAT
     NAT --> Kali
     Kali --> AI
     Kali --> Lab
+**Legend**
+- **Host**: Physical machine running VMware Workstation  
+- **NAT (VMnet8)**: Isolated virtual network with internet access  
+- **Kali VM**: Kali Linux XFCE environment  
+- **AI**: Local Ollama engine running Mistral  
+- **Lab VMs**: DVWA, OWASP BWA, Metasploitable
+
+
