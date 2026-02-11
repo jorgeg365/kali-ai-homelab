@@ -39,6 +39,7 @@ flowchart LR
     NAT --> Kali
     Kali --> AI
     Kali --> Lab
+```
 **Legend**
 - **Host**: Physical machine running VMware Workstation  
 - **NAT (VMnet8)**: Isolated virtual network with internet access  
